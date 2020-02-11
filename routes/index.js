@@ -2,6 +2,11 @@ var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
 var Appwork;
+var formated_date;
+var formated_due_date;
+var monthNames = ["January", "February", "March", "April", "May", "June",
+"July", "August", "September", "October", "November", "December"
+];
 
 
   var connection = mysql.createConnection({
@@ -26,12 +31,21 @@ var Appwork;
     Appwork = result;
   });
 
-  setInterval(function(){console.log('fields in Appwork are: ', Appwork[0])},3000);
+  setInterval(function(){
+    console.log('fields in Appwork are: ', Appwork[0])
+    var dat = Appwork[0].due_date;
+    formated_due_date = monthNames[dat.getMonth()] + ' ' + dat.getDate() + ', ' + (1900 + dat.getYear());
+    dat = Appwork[0].date;
+    formated_date = monthNames[dat.getMonth()] + ' ' + dat.getDate() + ', ' + (1900 + dat.getYear());
+
+    console.log(formated_date);
+    console.log(formated_due_date);
+  },3000);
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { name: Appwork[0].name, Invoice_no: Appwork[0].Invoice_no,
-                        date: Appwork[0].date, due_date: Appwork[0].due_date,
+                        date: formated_date, due_date: formated_due_date,
                         dev_cost: Appwork[0].development_cost, brand_cost: Appwork[0].branding_cost });
 });
 
