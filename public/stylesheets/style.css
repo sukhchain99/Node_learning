@@ -1,0 +1,73 @@
+body {
+  background-color: #F8F8F8;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.header {
+  width: 40%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-left: 30%;
+}
+
+.content {
+  
+}
+
+.details {
+  background-color: white;
+  width: 40%;
+  margin-left: 30%;
+  border-top: 2px solid #00B7FF;
+  padding: 30px;
+}
+
+.cost {
+  background-color: white;
+  width: 40%;
+  margin-top: 2px;
+  margin-left: 30%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.tag {
+  display: inline-block;
+  width: 70%;
+}
+
+.price {
+  display: inline-block;
+  text-align: right;
+  width: 30%;
+}
+
+.footer {
+  background-color: #F2F2F2;
+  width: 40%;
+  margin-left: 30%;
+  padding: 30px;
+  text-align: center;
+}
+
+.p {
+  padding: 5px;
+  margin: 0 auto;
+}
+
+.total {
+  background-color: white;
+  width: 40%;
+  margin-top: 2px;
+  margin-left: 30%;
+  padding: 30px;
+  text-align: right;
+}
+
+.align-link {
+  text-align: center;
+}

@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  div(class='header')
+    img(src="http://localhost:3000/images/email-logo.png", alt="email-logo")
+
+  div(class='content')
+    div(class='details')
+      p #{name}
+      p Invoice: ##{Invoice_no}
+      p Date: #{date}
+      p Due date: #{due_date}
+
+    div(class='cost')
+      div(class='tag')
+        p Website design and development
+      div(class='price')
+        p $#{dev_cost}
+
+    div(class='cost')
+      div(class='tag')
+        p Branding
+      div(class='price')
+        p $#{brand_cost}
+
+    div(class='total')
+      p Subtotal: $#{dev_cost+brand_cost}
+      p Tax(25%): $#{(dev_cost+brand_cost)*0.25}
+      br
+      h3 Total: $#{(dev_cost+brand_cost)+((dev_cost+brand_cost)*0.25)}
+      br
+      div(class='align-link')
+        a(href="http://example.com") View in browser
+      p NOTE: This email template was created with https://beefree.io service
+
+
+  div(class='footer')
+
+    p(class='p') Appwork ©
+    a(href="http://example.com") example.com

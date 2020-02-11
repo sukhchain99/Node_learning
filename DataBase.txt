@@ -1,0 +1,23 @@
+Created!
+You have successfully created a new database. The details are below.
+
+Username: nUlb9aa8ln
+
+Database name: nUlb9aa8ln
+
+Password: cEkNiVNyzH
+
+Server: remotemysql.com
+
+Port: 3306
+
+
+----------
+
+
+name : text : Alice Hampton
+invoice_no : int : 49029
+date : date : 
+due_date : date : 
+development_cost : double : 
+branding_cost : double : 
